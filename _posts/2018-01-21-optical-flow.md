@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 光流算法
-category: 知识总结
+category: 知识整理
 tags: 
   - visual odometry
 description: 
