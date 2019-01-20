@@ -1,8 +1,9 @@
 ---
 layout: post
 title: 光学成像系统中的像差与噪声
-category: 光学
-tags: Optic
+category: 知识整理
+tags: 
+  - imaging system
 description: 
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

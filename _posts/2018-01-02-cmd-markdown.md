@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Cmd Markdown 使用指南
-category: 工具
+category: 实用文档
 tags: 
-	- markdown
+  - markdown
 description: 
 ---
 

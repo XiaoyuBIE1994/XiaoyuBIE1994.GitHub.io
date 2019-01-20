@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Python学习笔记 (一)：文件和目录操作(os 模块)
-category: Coding
-tags: Coding
+title: Python文件和目录操作(os 模块)
+category: 知识整理
+tags:
+  - python
 description: 
 ---
 

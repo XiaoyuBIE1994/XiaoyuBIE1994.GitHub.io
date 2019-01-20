@@ -1,8 +1,9 @@
 ---
 layout: post
 title: 光流算法
-category: 计算机视觉
-tags: ComputerVision
+category: 知识总结
+tags: 
+  - visual odometry
 description: 
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

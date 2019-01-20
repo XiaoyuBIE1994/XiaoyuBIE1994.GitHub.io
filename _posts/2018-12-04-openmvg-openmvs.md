@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Ubuntu16.04安装OpenMVG+OpenMVS踩坑记录
-category: 计算机视觉
-tags: ComputerVision
+category: 经验总结
+tags: 
+  - openmvg
+  - openmvs
 description: 
 ---
 
