@@ -214,7 +214,7 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  Zhihu: https://github.com/XiaoyuBIE1994
+  GitHub: https://github.com/XiaoyuBIE1994
   Email: mailto:biexiaoyu1994@gmail.com
 
 
