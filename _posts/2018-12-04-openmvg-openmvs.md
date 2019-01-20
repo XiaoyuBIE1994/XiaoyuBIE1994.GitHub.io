@@ -7,8 +7,6 @@ tags:
   - openmvs
 description: 
 ---
-
-Tuesday, 04. December 2018 03:45pm 
 ___
 
 因为最近的项目需求，需要把Slam的定位和三维重建的结果结合在一起，所以照着网上的教程装了一遍OpenMVG和OpenMVS。本文记录了大致编译的流程，主要参考了
