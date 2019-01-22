@@ -8,7 +8,7 @@ description:
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-# 光学成像系统
+## 一、光学成像系统
 在图像处理领域，我们所处理的图像往往都是由光学成像系统（如摄像头）所得到。
 
 ![光学成像系统][1]
@@ -39,7 +39,7 @@ $$FA \times F'A' = f^2$$
 
 
 
-# 像差
+## 二、像差
 ### 球差(Sperical aberration)
 球差是指光轴上的物体或是一束平行入射光，在成像时接近中心与靠近边缘的光线不能聚焦在一个点上。下图中显示了理想光学成像系统与实际光学系统的光线轨迹。
 

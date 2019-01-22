@@ -8,7 +8,7 @@ description:
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-# 光流算法
+## 基本原理
 光流法实际是通过检测图像像素点的强度随空间和时间的变化进行对物体移动速度和方向的预测的方法，我们有:
 
 $$
@@ -48,7 +48,7 @@ $$
 \bigtriangledown I^T \cdot \vec{V} = -I_t
 $$
 
-### Lucas-Kanade 方法
+## 二、Lucas-Kanade 方法
 L-K方法是实际应用中的一种求取光流向量的方法。通过结合几个邻近像素点的信息，L-K方法能够消除光流方程的多义性，而且与逐点计算的方法相比，L-K方法对图像噪声不敏感。 但由于这是一种局部方法，所以在图像的均匀区域内部，此方法无法提供光流信息。
 
 L-K方法假设两个相邻帧的图像内容位移很小，且位移在p点的领域内大致为常数，那么局部图像流(速度)向量\\((V_x,V_y)\\)满足:
