@@ -15,7 +15,8 @@ $$
 I(x,y,t) = I(x+\Delta x, y+\Delta y, t+\Delta t)
 $$
 
-假设位移很小，那么可以根据泰勒级数饿到：
+假设位移很小，那么可以根据泰勒级数得到：
+
 $$
 I(x+\Delta x, y+\Delta y, t+\Delta t) = I(x,y,t)+\frac{\partial I}{\partial x}\Delta x + \frac{\partial I}{\partial y}\Delta y + \frac{\partial I}{\partial t}\Delta t
 $$
