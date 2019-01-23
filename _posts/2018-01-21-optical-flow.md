@@ -6,7 +6,6 @@ tags:
   - visual odometry
 description: 
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 ## 基本原理
 光流法实际是通过检测图像像素点的强度随空间和时间的变化进行对物体移动速度和方向的预测的方法，我们有:
