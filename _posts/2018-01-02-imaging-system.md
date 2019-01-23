@@ -8,6 +8,13 @@ description:
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
+<style>
+img{
+    width: 60%;
+    padding-left: 20%;
+}
+</style>
+
 ## 一、光学成像系统
 在图像处理领域，我们所处理的图像往往都是由光学成像系统（如摄像头）所得到。
 
