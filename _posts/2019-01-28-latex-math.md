@@ -4,7 +4,7 @@ title: LaTex常用数学符号整理
 category: 知识整理
 tags: latex
 ---
-<!-- more -->
+
 ## 一、常用公式
 
 | 描述 | 写法 | 效果展示 |
