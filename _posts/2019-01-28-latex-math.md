@@ -1,9 +1,8 @@
 ---
 layout: post
 title: LaTex常用数学符号整理
-category: 工具
+category: 知识整理
 tags: latex
-description: 
 ---
 
 ## 一、常用公式

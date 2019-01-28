@@ -4,7 +4,6 @@ title: Python文件和目录操作(os 模块)
 category: 知识整理
 tags:
   - python
-description: 
 ---
 
 目前在写代码的时候发现自己对代码的各类操作非常陌生,不写一写实在记不住。于是开启了Python学习笔记系列，主要用于记录自己学习python中各类知识的总结。

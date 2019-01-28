@@ -4,7 +4,6 @@ title: Cmd Markdown 使用指南
 category: 实用文档
 tags: 
   - markdown
-description: 
 ---
 
 写文章经常需要用到Markdown的编辑器，这里推荐一个简单实用的[Cmd Markdown编辑阅读器](https://www.zybuluo.com/cmd/)，以下是他的官方使用说明。

@@ -3,7 +3,6 @@ layout: post
 title: Remarkable Linux/Windozs双平台Markdown编辑器
 category: 工具
 tags: markdown
-description: 
 ---
 
 Mardown是我最喜欢的记笔记语言，没有之一。功能强大而且操作简单，其中猪场推出的云笔记虽然很不错，支持云端储存，但是它使用了KaLex语法，让常年用Latex写报告的我十分的不适应，加上在国外云端的加载速度还是太慢，最后选择了Remarkable这样一款简单实用而且免费的Markdown编辑器，这款软件支持Linux/Windozs双平台操作，而且可以很方便的转换成pdf和html格式，如果只是想写博客，不需要转pdf或者不介意充钱买会员的，也可以考虑[印象笔记 Cmd Markdown](https://www.zybuluo.com/cmd/)
