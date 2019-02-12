@@ -42,7 +42,7 @@ tags: latex
 | $\delta$ | \delta | $\kappa$ | \kappa | $\rho$ | \rho | $\chi$ | \chi |
 | $\epsilon$ | \epsilon | $\lambda$ | \lambda | $\varrho$ | \varrho | $\psi$ | \psi |
 | $\varepsilon$ | \varepsilon | $\mu$ | \mu | $\sigma$ | \sigma | $\omega$ | \omega |
-| $\zeta$ | \zeta | $\nu$ | \nu | $\varsigma$ | \varsigma | $$ | |
+| $\zeta$ | \zeta | $\nu$ | \nu | $\varsigma$ | \varsigma |  | |
 | $\eta$ | \eta | $\xi$ | \xi | $\tau$ | \tau |  | |
 
 
