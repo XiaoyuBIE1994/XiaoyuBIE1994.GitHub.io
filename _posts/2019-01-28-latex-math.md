@@ -5,6 +5,12 @@ category: 知识整理
 tags: latex
 ---
 
+
+
+在论文和博客的写作中，经常会用到Latex的语法来书写数学公式，一份详细的数学符号对照表必不可少，本文重写了部分[常用数学符号的 LaTeX 表示方法](http://mohu.org/info/symbols/symbols.htm)，用以熟悉相关的语法，也以免在这一网站宕机给公式的书写带来不便
+
+
+
 ## 一、常用公式
 
 |     描述     |                  写法                  |                效果展示                |
@@ -119,49 +125,45 @@ tags: latex
 
 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
+| $($ | ( | $)$ | ) | $\uparrow$ | \uparrow | $\Uparrow$ | \Uparrow |
+| $\lbrack$ | \\[ or \lbrack | $\rbrack$ | \\] or \rbrack | $\downarrow$ | \downarrow | $\Downarrow$ | \Downarrow |
+| $\lbrace$ | \\{ or \lbrace | $\rbrace$ | \\} or \rbrace | $\updownarrow$ | \updownarrow | $\Updownarrow$ | \Updownarrow |
+| $\langle$ | \langle | $\rangle$ | \rangle | $\vert$ | \| or \vert | $\Vert$ | \\| or \Vert |
+| $\lfloor$ | \lfloor | $\rfloor$ | \rfloor | $\lceil$ | \lceil | $\rceil$ | \rceil |
+| $/$ | / | $\backslash$ | \backslash |  | |  | |
+| $\lgroup$ | \lgroup | $\rgroup$ | \rgroup | $\lmoustache$ | \lmoustache | $\rmoustache$ | \rmoustache |
+| $\arrowvert$ | \arrowvert | $\Arrowvert$ | \Arrowvert | $\bracevert$ | \bracevert | | |
 
 
-## 十、非数学符号
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
+## 十、其他符号
 
-## 十一、AMS定界符
+|      符号      | 写法          | 符号         | 写法       | 符号        | 写法      | 符号         | 写法       |
+| :------------: | ------------- | ------------ | ---------- | ----------- | --------- | ------------ | ---------- |
+|    $\dots$     | \dots         | $\cdots$     | \cdots     | $\vdots$    | \vdots    | $\ddots$     | \ddots     |
+|    $\hbar$     | \hbar         | $\imath$     | \imath     | $\jmath$    | \jmath    | $\ell$       | \ell       |
+|     $\Re$      | \Re           | $\Im$        | \Im        | $\aleph$    | \aleph    | $\wp$        | \wp        |
+|   $\forall$    | \forall       | $\exists$    | \exists    | $\mho$      | \mho      | $\partial$   | \partial   |
+|      $'$       | '             | $\prime$     | \prime     | $\emptyset$ | \emptyset | $\infty$     | \infty     |
+|    $\nabla$    | \nabla        | $\triangle$  | \triangle  | $\Box$      | \Box      | $\Diamond$   | \Diamond   |
+|     $\bot$     | \bot          | $\top$       | \top       | $\angle$    | \angle    | $\surd$      | \surd      |
+| $\diamondsuit$ | \diamondsuit  | $\heartsuit$ | \heartsuit | $\clubsuit$ | \clubsuit | $\spadesuit$ | \spadesuit |
+|     $\neg$     | \neg or \lnot | $\flat$      | \flat      | $\natural$  | \natural  | $\sharp$     | \sharp     |
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
 
-## 十二、AMS希腊和希伯来字母
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
+## 十一、非数学符号
 
-## 十三、AMS二元否定关系符和箭头
+| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| $\S$ | \S | $P\$ | \P |  |  |
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
 
-## 十四、AMS二元运算符
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
+PS: 原文中还有其他符号（如AMS运算符，希伯来字母等），但MathJax中或是不支持，或是使用频率太低，故而在这里不再写入
 
-## 十五、AMS其他符号
 
-| 符号 | 写法 | 符号 | 写法 | 符号 | 写法 | 符号 | 写法 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|  |  |  |  |  |  |  |  |
 
-## 十六、数学字母
 
-| 例子 | 语法 | 宏包 |
-| :-: | :-: | :-: |
-|  |  |  |
 
 
