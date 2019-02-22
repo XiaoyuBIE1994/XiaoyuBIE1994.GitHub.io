@@ -3,7 +3,7 @@ layout: post
 title: 光流算法
 category: 知识整理
 tags: 
-  - visual odometry
+  - SLAM
 ---
 
 ## 一、基本原理
