@@ -31,7 +31,7 @@ Descriptor 可以认为是一个多维向量，已有的地图包含大量的图
 
 
 
-由于分层分类，所以一个描述子可能对应多个节点。就像对于语句分类一样，不同的单词的权重不应该是一样的，所以文中制定了一个基于 entropy 的打分规则：
+由于分层分类，所以一个描述子可能对应多个节点。就像对于语句分类一样，不同的单词的权重不应该是一样的，所以文中制定了一个基于 entropy 的打分规则：  
 
 
 $$
@@ -39,9 +39,12 @@ q_i = n_i w_i \\
 d_i = m_i w_i \\
 w_i = ln \frac{N}{N_i}
 $$
+
+
 $i$ 代表节点，$q_i, d_i$ 代表当前图像 query 和 database 在节点 $i$ 处的 scoring，$w_i$ 代表权重，$N$ 代表 database 中图像的数量， $N_i$ 代表出现过节点 $i$ 的图像数量，权重的定义基于 TF-IDF 法则（$TF_I = \frac{n_i}{n}$，单幅图像中出现的频率越高权重越大，$IDF_i = ln \frac{N}{N_i}$，拥有特征的图像越多权重越低），但由于 TF 的效果并不明显，所以只取了 IDF 的定义
 
-两幅图像之间的 relevance score 定义如下：
+两幅图像之间的 relevance score 定义如下：  
+
 
 
 $$
@@ -49,9 +52,11 @@ s(q,d) = \parallel \frac{q}{\parallel q \parallel} - \frac{d}{\parallel d \paral
 $$
 
 
+
 文中指出使用 $L_1-norm$ 效果好于 $L_2-norm$，可以设定一定的阈值将过小的权重直接设置为0，但文中指出大多数情况下并无改善
 
 使用normalized的向量在实际应用中可以进行简化运算：
+
 
 
 $$
