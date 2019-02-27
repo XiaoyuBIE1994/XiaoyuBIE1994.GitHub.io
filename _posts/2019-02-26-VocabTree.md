@@ -51,7 +51,7 @@ $$
 
 使用normalized的向量在实际应用中可以进行简化运算：
 
-$$i
+$$
 \begin{align}
 \parallel q - d \parallel^p_p & = \sum_i |q_i - d_i|^p \\
 & = \sum_{i|d_i=0} |q_i|^p + \sum_{i|q_i=0} |d_i|^p + \sum_{i | q_i \ne 0,d_i \ne 0}|q_i - d_i|^p \\ 
