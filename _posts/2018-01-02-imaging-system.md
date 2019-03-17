@@ -13,7 +13,7 @@ img{
 }
 </style>
 
-## 一、光学成像系统
+## 光学成像系统
 在图像处理领域，我们所处理的图像往往都是由光学成像系统（如摄像头）所得到。
 
 ![光学成像系统][1]
@@ -44,7 +44,7 @@ $$FA \times F'A' = f^2$$
 
 
 
-## 二、像差
+## 像差
 ### 球差(Sperical aberration)
 球差是指光轴上的物体或是一束平行入射光，在成像时接近中心与靠近边缘的光线不能聚焦在一个点上。下图中显示了理想光学成像系统与实际光学系统的光线轨迹。
 
@@ -117,14 +117,14 @@ $$y=h*x+b$$
 
 其中x代表理想图像，y为实际所测得图像数据，h是一个卷积滤波器，与光学成像系统和光学衍射有关，b代表着系统的噪声。虽然绝大多数情况下这个模型并不完全正确，但更为复杂的模型将会意味着更为复杂的处理算法。简化的模型虽然牺牲了一定的精确度，但可以大大提高计算效率。
 
-  [1]: http://res.cloudinary.com/bxy1994/image/upload/v1514890547/ImageSystem_jzh41s.jpg
-  [2]: http://res.cloudinary.com/bxy1994/image/upload/v1514891870/lens_jmn1ts.jpg
-  [3]: http://res.cloudinary.com/bxy1994/image/upload/v1514896621/aperture_wpuh4x.jpg
-  [4]: http://res.cloudinary.com/bxy1994/image/upload/v1514904821/field-aperture_iuxq7i.jpg
-  [5]: http://res.cloudinary.com/bxy1994/image/upload/v1514906757/Spherical_aberration_vm8sdd.png
-  [6]: http://res.cloudinary.com/bxy1994/image/upload/v1514907448/coma_cl577q.png
-  [7]: http://res.cloudinary.com/bxy1994/image/upload/v1514907939/Astigmatism_tseog1.png
-  [8]: http://res.cloudinary.com/bxy1994/image/upload/v1514908250/curvature_yf5saz.png
-  [9]: http://res.cloudinary.com/bxy1994/image/upload/v1514908939/distorition_urfdlx.jpg
-  [10]: http://res.cloudinary.com/bxy1994/image/upload/v1514909089/Chromatic_aberration_ktynzx.png
-  [11]: http://res.cloudinary.com/bxy1994/image/upload/v1514909672/digital_image_sensor_c4xgza.jpg
+[1]: http://res.cloudinary.com/bxy1994/image/upload/v1514890547/ImageSystem_jzh41s.jpg
+[2]: http://res.cloudinary.com/bxy1994/image/upload/v1514891870/lens_jmn1ts.jpg
+[3]: http://res.cloudinary.com/bxy1994/image/upload/v1514896621/aperture_wpuh4x.jpg
+[4]: http://res.cloudinary.com/bxy1994/image/upload/v1514904821/field-aperture_iuxq7i.jpg
+[5]: http://res.cloudinary.com/bxy1994/image/upload/v1514906757/Spherical_aberration_vm8sdd.png
+[6]: http://res.cloudinary.com/bxy1994/image/upload/v1514907448/coma_cl577q.png
+[7]: http://res.cloudinary.com/bxy1994/image/upload/v1514907939/Astigmatism_tseog1.png
+[8]: http://res.cloudinary.com/bxy1994/image/upload/v1514908250/curvature_yf5saz.png
+[9]: http://res.cloudinary.com/bxy1994/image/upload/v1514908939/distorition_urfdlx.jpg
+[10]: http://res.cloudinary.com/bxy1994/image/upload/v1514909089/Chromatic_aberration_ktynzx.png
+[11]: http://res.cloudinary.com/bxy1994/image/upload/v1514909672/digital_image_sensor_c4xgza.jpg
