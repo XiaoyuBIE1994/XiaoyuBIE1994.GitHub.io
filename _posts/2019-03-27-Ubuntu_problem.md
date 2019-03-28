@@ -18,16 +18,16 @@ tags:
 
 ```shell
 # Ubuntu版本
-$ lsb_release -a
+lsb_release -a
 # 磁盘空间大小
-$ df -h
+df -h
 # 显存大小(仅针对Nvida)
-$ nvidia-smi
+nvidia-smi
 # 查看CPU信息
-$ cat /proc/cpuinfo # 详细
-$ cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c # 简要
+cat /proc/cpuinfo # 详细
+cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c # 简要
 # 查看电脑运行状态(需下载htop)
-$ htop
+htop
 ```
 
 
@@ -62,10 +62,10 @@ $ free
 #### 1.3  修改系统默认路径
 
 ```shell
-$ gvim .bashrc
-$ PATH=$(getconf PATH) # 将路径恢复为默认路径
-$ export PATH=$PATH:my/own/path # 添加自己需要的路径
-$ source .bashrc # 更新bash
+gvim .bashrc
+PATH=$(getconf PATH) # 将路径恢复为默认路径
+export PATH=$PATH:my/own/path # 添加自己需要的路径
+source .bashrc # 更新bash
 ```
 
 这样做的好处是每次都提前将路径恢复到默认路径,然后再添加自己所需要的路径,否则PATH中可能会含有历史遗留路径
@@ -78,18 +78,18 @@ $ source .bashrc # 更新bash
 
 ```shell
 # 查找第三方库的文件信息(如 opencv, eigen3)
-$ pkg-config --modversion package_name
+pkg-config --modversion package_name
 # 通过dpkg来查看已安装的包
-$ dpkg -l 'package_name'
+dpkg -l 'package_name'
 # 搜寻目录/lib和/usr/lib以及动态库配置文件/etc/ld.so.conf内所列的目录下，搜索出可共享的动态链接库
-$ ldconfig -p | grep <name of package> 
+ldconfig -p | grep <name of package> 
 # 查看gcc版本
-$ gcc -v
+gcc -v
 # 查看cmake版本
-$ cmake --version
+cmake --version
 # 查看Boost版本
-$ dpkg -s libboost-dev | grep 'Version'
-$ dpkg -S /usr/include/boost/version.hpp
+dpkg -s libboost-dev | grep 'Version'
+dpkg -S /usr/include/boost/version.hpp
 
 ```
 
@@ -131,9 +131,9 @@ $ dpkg -S /usr/include/boost/version.hpp
 
 
 ```shell
-$ sudo update-grub2
-$ sudo apt-get install grub2
-$ sudo reboot
+sudo update-grub2
+sudo apt-get install grub2
+sudo reboot
 ```
 
 完了后可能出现我发进入Bios setup 和 Secure Boot Violation 错误，修复方法参考上面两条
@@ -156,7 +156,7 @@ Ubuntu默认的python版本为2.7.6，终端也是使用Python打开的，所以
 解决办法：在 Ubuntu 14.04中，输入：
 
 ```shell
-$ sudo apt-get install exfat-fuse exfat-utils
+sudo apt-get install exfat-fuse exfat-utils
 ```
 
 
@@ -168,7 +168,7 @@ $ sudo apt-get install exfat-fuse exfat-utils
 解决办法 : 升级相应的NSS版本 :
 
 ```shell
-$ sudo apt-get install libnss3
+sudo apt-get install libnss3
 ```
 
 
@@ -182,25 +182,25 @@ $ sudo apt-get install libnss3
 - 若直接 passwd 用户名 会出现如下错误
 
 ```shell
-$ passwd: Authentication token manipulation errror
-$ passwd: passwd unchanged
+passwd: Authentication token manipulation errror
+passwd: passwd unchanged
 ```
 - 若要解决此问题,需要进行如下操作:
 
 ```shell
-$ mount  -o  remount,rw /  //进入 remount
-$ passwd 用户名 //然后输入两次新密码即可
-$ reboot // 重启
+mount  -o  remount,rw /  //进入 remount
+passwd 用户名 //然后输入两次新密码即可
+reboot // 重启
 ```
 
 若想更改登录密码
 
 ```shell
-$ chmod 666 /dev/null  // 所有用户都有读写权限
-$ mount -o remount,rw /  // 将根分区设置为读写模式
-$ chmod 777 /etc/passwd  // 所有用户都有读写执行权限
-$ pwconv  // 开启用户的shadow命令
-$ passwd 用户名 //
+chmod 666 /dev/null  // 所有用户都有读写权限
+mount -o remount,rw /  // 将根分区设置为读写模式
+chmod 777 /etc/passwd  // 所有用户都有读写执行权限
+pwconv  // 开启用户的shadow命令
+passwd 用户名 //
 ```
 
 
@@ -224,7 +224,7 @@ $ passwd 用户名 //
 
 
 ```shell
-$ ls -l `which sh`
+ls -l `which sh`
 ```
 
 会显示如下信息
@@ -239,7 +239,7 @@ lrwxrwxrwx 1 root root 4 Feb 17  2016 /bin/sh -> dash
 
 
 ```shell
-$ sudo dpkg-reconfig dash
+sudo dpkg-reconfig dash
 ```
 
 将选项改为“否”，再运行上述命令变可以看到接续的方式变成了bash，如果不成功，可尝试重启
@@ -253,7 +253,7 @@ $ sudo dpkg-reconfig dash
 解决办法：
 
 ```
-$ conda install -c defaults pyqt=5 qt
+conda install -c defaults pyqt=5 qt
 ```
 
 
@@ -291,9 +291,32 @@ sudo fsck -b 32768 /dev/sda1 -y
 
 
 
+#### 2.12 Ubuntu和Windows双系统时间不一致
+
+这是由于Ubuntu和Windows看待硬件时间不一致导致的
+
+- Windows把系统硬件时间当作本地时间（Local time），即操作系统中显示的时间跟BIOS中显示的时间是一样的
+- Linux/Unix/Mac把硬件时间当作UTC（Universal Time Coordinated,协调世界时），操作系统中显示的时间是硬件时间经过换算得来
 
 
 
+Ubuntu16.04之前：
+
+```shell
+sudo gedit /etc/default/rcS
+sudo sed -i 's/UTC=no/UTC=yes/' /etc/default/rcS
+```
+
+Ubuntu16.04的配置文件中没有`UTC=yes`，此时可以用ntpdate来校准
+
+```shell
+# 安装ntpdate
+sudo apt-get install ntpdate
+# 校准时间
+sudo ntpdate time.windows.com
+# 讲时间更新到硬件上
+sudo hwclock --localtime --systohc
+```
 
 
 
