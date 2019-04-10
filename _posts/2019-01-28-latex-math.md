@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LaTex常用数学符号整理
-category: 知识整理
+category: 实用工具
 tags: latex
 ---
 

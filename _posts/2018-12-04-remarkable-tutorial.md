@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remarkable Linux/Windozs双平台Markdown编辑器
-category: 工具
+category: 实用工具
 tags: markdown
 ---
 
