@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Lidar-Monocular Visual Odometry(Lidar和单目的VO)
+title: Robust audio-visual scene understanding with hybrid probabilistic & deep learning models
 category: Paper阅读
 tags: 
   - multi-model perception
@@ -15,10 +15,6 @@ img{
     padding-left: 20%;
 }
 </style>
-
-
-# Robust audio-visual scene understanding with hybrid probabilistic & deep learning models
-
 
 
 ## 课题摘要
