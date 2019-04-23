@@ -62,13 +62,38 @@ F-formation:  proper organization of three social spaces: *o*-space, *p*-space a
 
 
 
-visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}$, $v_{kt}^b \in \mathbb{R}^{d_b}$
+visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}​$, $v_{kt}^b \in \mathbb{R}^{d_b}​$
 
 orientation: $\theta_{kt}^h$, $\theta_{kt}^b$ , 离散化, 分为 C 个 sectors
 
-labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}$ 
+labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}​$ 
 
-unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}$ 
+unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}​$ 
+
+
+
+**模型：**
+
+模型为已知视觉描述子和某一段已标记的角度数据，来预测未标注的角度数据，根据以下依据将模型化为非线性凸优化问题：
+
+- 角度是描述子的线性分类器，$\Theta^b = W^b \left\lbrack \begin{matrix}  V^b \\ 1^T  \end{matrix}  \right\rbrack$ ，令 $J_b = \lbrack  \Theta^{bT} V^{bT} 1 \rbrack^T $ ， 问题转化为最小化矩阵秩 $\Theta_{\mathcal{U}}^{b*} = \mathop{\arg\min} rank(J_b)​$
+- 实际观测 $\tilde{J}_b$ 带有噪声，加入约束项 $\parallel  P_{\mathcal{O}}^b(\tilde{J}_b - J_b) \parallel_F$ ，其中 $P_{\mathcal{O}}^b$ 是 projection on observation，也就是将 $J$ 中 $\Theta$ 的 unlabeled 部分置零
+- 对于角度来说，时域上应该是平滑的
+- 头和身体的角度应该大致相同
+
+
+
+**优化方法：**
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -191,7 +216,11 @@ LDS: linear dynamical system
 
 2018, ECCV
 
+GUM: Gaussian-uniform mixture
 
+**主要贡献:**
+
+- 提出了一种解决outliers的
 
 
 
