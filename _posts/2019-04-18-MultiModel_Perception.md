@@ -62,13 +62,13 @@ F-formation:  proper organization of three social spaces: *o*-space, *p*-space a
 
 
 
-visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}​$, $v_{kt}^b \in \mathbb{R}^{d_b}​$
+visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}$, $v_{kt}^b \in \mathbb{R}^{d_b}$
 
-orientation: $\theta_{kt}^h​$, $\theta_{kt}^b​$ , 离散化, 分为 C 个 sectors
+orientation: $\theta_{kt}^h$, $\theta_{kt}^b$ , 离散化, 分为 C 个 sectors
 
-labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}​$ 
+labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}$ 
 
-unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}​$ 
+unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}$ 
 
 
 
@@ -84,7 +84,7 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 
 #### 2. SALSA: A Novel Dataset for Multimodal Group Behavior Analysis
 
-2016, PAMI
+2016, TPAMI
 
 相比于其他数据集, SALSA 拥有 vision, audio, IR, BT 和 Accel,数据更为全面
 
@@ -113,6 +113,36 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 #### 4. Online localization and tracking of multiple moving speakers in reverberant environment
 
 2019, JSTSP
+
+DP-RTF: direct-path relative transfer function
+
+IPDs: interaural phase difference
+
+GMM: Gaussian mixted model
+
+CTF: convolutive transger function
+
+RLS: recursive least squares
+
+LMC: least mean squares
+
+EG: exponentiated gradient
+
+
+
+**主要贡献:**
+
+- 使用 recursive least squares 来计算DP-RTF features
+- 提出 exponentiated gradient 来追踪声源
+- 使用 VEM 算法来进行 tracking
+- 最终,实现了一个 online 的多人声学定位追踪框架,对于声音的混杂(reverberation)和噪声(nois)非常鲁棒
+
+
+
+**未来:**
+
+- 针对声音断断续续,且正在移动的人声的定位需要进一步研究,需要解决人声识别的问题
+- VEM tracker 很容易和 frame-wise 的定位算法结合
 
 
 
@@ -152,6 +182,24 @@ LDS: linear dynamical system
 - 面对实际环境需要 更加鲁棒
 - 需要能够识别出有多少个声源
 - 研究采集设备的物理变化和 mixing filter 之间的关系
+
+
+
+
+
+#### 6. Deepgum: Learning deep robust regression with a Gaussian-uniform mixture model
+
+2018, ECCV
+
+
+
+
+
+
+
+#### 7. A comprehensive analysis of deep regression
+
+2019, TPAMI
 
 
 
