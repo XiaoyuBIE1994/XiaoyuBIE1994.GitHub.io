@@ -31,11 +31,11 @@ img{
 
 
 
-## 论文阅读
+# 论文阅读
 
 
 
-#### 1. Analyzing Free-standing Conversational Groups: A Multimodal Approach
+## 1. Analyzing Free-standing Conversational Groups: A Multimodal Approach
 
 2015, ACMMM
 
@@ -62,13 +62,13 @@ F-formation:  proper organization of three social spaces: *o*-space, *p*-space a
 
 
 
-visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}​$, $v_{kt}^b \in \mathbb{R}^{d_b}​$
+visual descriptors:  $v_{kt}^h \in \mathbb{R}^{d_h}$, $v_{kt}^b \in \mathbb{R}^{d_b}$
 
 orientation: $\theta_{kt}^h$, $\theta_{kt}^b$ , 离散化, 分为 C 个 sectors
 
-labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}​$ 
+labeled training set: $\mathcal{L} = \lbrace v_{kt}^h, \theta_{kt}^h, v_{kt}^b, \theta_{kt}^b  \rbrace^{K, T_0}_{k=1, t=1}$ 
 
-unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}​$ 
+unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=1, t=T_0+1}$ 
 
 
 
@@ -76,7 +76,7 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 
 模型为已知视觉描述子和某一段已标记的角度数据，来预测未标注的角度数据，根据以下依据将模型化为非线性凸优化问题：
 
-- 角度是描述子的线性分类器，$\Theta^b = W^b \left\lbrack \begin{matrix}  V^b \\ 1^T  \end{matrix}  \right\rbrack$ ，令 $J_b = \lbrack  \Theta^{bT} V^{bT} 1 \rbrack^T $ ， 问题转化为最小化矩阵秩 $\Theta_{\mathcal{U}}^{b*} = \mathop{\arg\min} rank(J_b)​$
+- 角度是描述子的线性分类器，$\Theta^b = W^b \left\lbrack \begin{matrix}  V^b \\ 1^T  \end{matrix}  \right\rbrack$ ，令 $J_b = \lbrack  \Theta^{bT} V^{bT} 1 \rbrack^T $ ， 问题转化为最小化矩阵秩 $\Theta_{\mathcal{U}}^{b*} = \mathop{\arg\min} rank(J_b)$
 - 实际观测 $\tilde{J}_b$ 带有噪声，加入约束项 $\parallel  P_{\mathcal{O}}^b(\tilde{J}_b - J_b) \parallel_F$ ，其中 $P_{\mathcal{O}}^b$ 是 projection on observation，也就是将 $J$ 中 $\Theta$ 的 unlabeled 部分置零
 - 对于角度来说，时域上应该是平滑的
 - 头和身体的角度应该大致相同
@@ -97,7 +97,7 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 
 
 
-
+　
 
 **未来:**
 
@@ -107,7 +107,7 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 
 
 
-#### 2. SALSA: A Novel Dataset for Multimodal Group Behavior Analysis
+## 2. SALSA: A Novel Dataset for Multimodal Group Behavior Analysis
 
 2016, TPAMI
 
@@ -123,19 +123,21 @@ unlabeled features: $\mathcal{U} = \lbrace v_{kt}^h, v_{kt}^b \rbrace^{K, T}_{k=
 
 
 
-#### 3. Exploiting the complementarity of audio and visual data in multi-speaker tracking
+## 3. Exploiting the complementarity of audio and visual data in multi-speaker tracking
 
-2017, ICCV
+2017, ICCV workshop
 
 **主要贡献:**
 
 - 提出了一个新的 tracking 框架,使用 visual 和 audio 信息,集成在一个 Kalman Filter 之中
 
+第２章讲 visual 和 audio 的观测模型，第３章讲用 variational inference 来进行后验概率的简化，但具体的状态更新和 Kalman 增益怎么来的？
+
+Kalman filter 的建模怎么来的？
 
 
 
-
-#### 4. Online localization and tracking of multiple moving speakers in reverberant environment
+## 4. Online localization and tracking of multiple moving speakers in reverberant environment
 
 2019, JSTSP
 
@@ -145,7 +147,9 @@ IPDs: interaural phase difference
 
 GMM: Gaussian mixted model
 
-CTF: convolutive transger function
+RIR: roome impulse response	
+
+CTF: convolutive transfer function
 
 RLS: recursive least squares
 
@@ -164,6 +168,20 @@ EG: exponentiated gradient
 
 
 
+用 DP-RTF features 的预测来进行定位，用一种迭代优化的方式
+
+在针对多个人的时候，假设在一个TF domain只有一个人？
+
+在定位阶段，考虑为 complex-Gaussian mixed model ，利用似然函数和熵来构建目标函数，考虑帧间信息，迭代优化？
+
+在 tracking 阶段，利用 Bayes filter 来构建时序上的推进关系，用 VEM 来最大化简化的后验概率？
+
+
+
+
+
+
+
 **未来:**
 
 - 针对声音断断续续,且正在移动的人声的定位需要进一步研究,需要解决人声识别的问题
@@ -173,7 +191,7 @@ EG: exponentiated gradient
 
 
 
-#### 5. A variational EM algorithm for the separation of time-varying convolutive audio mixtures
+## 5. A variational EM algorithm for the separation of time-varying convolutive audio mixtures
 
 2016, TASLP
 
@@ -185,7 +203,7 @@ LGMs: local Gaussian models
 
 NMF: nonnegative matrix factorization
 
-PSD: positive 
+PSD: positive semidefined 
 
 STFT: short-time Fourier transform
 
@@ -195,10 +213,34 @@ DOA: direction of arrival
 
 LDS: linear dynamical system
 
+####　主要领域：
+
+Ａudio source separation
+
+分为 time-invariant mixing filter 和 time-vaying flters
+
+**time-invariant mixing filter**
+
+从时/频转换开始，用STFT变换到频域，之后分为三种：
+
+- 基于 independent component analysis (ICA)，
+- 基于 sparse component analysis 和 binary masking
+- 基于 complex-valued local Gaussian models (LGMs)
+
+
+
+**time-vaying**
+
+将 STFT 和 time-invariant ASS 算法应用到滑动的窗口，难点在于窗口大小的选择
+
+
+
+
+
 **主要贡献:**
 
 - 解决了分辨 time-varying convolutive mixture 的声源信号的问题,声源会移动,环境声需要被考虑
-- variational EM 算法, Kalman smoother
+  - variational EM 算法, Kalman smoother
 
 
 
@@ -212,7 +254,7 @@ LDS: linear dynamical system
 
 
 
-#### 6. Deepgum: Learning deep robust regression with a Gaussian-uniform mixture model
+## 6. Deepgum: Learning deep robust regression with a Gaussian-uniform mixture model
 
 2018, ECCV
 
@@ -226,7 +268,7 @@ GUM: Gaussian-uniform mixture
 
 
 
-#### 7. A comprehensive analysis of deep regression
+## 7. A comprehensive analysis of deep regression
 
 2019, TPAMI
 
