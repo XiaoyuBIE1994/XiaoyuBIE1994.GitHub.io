@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu16.04常见操作及问题汇总
-category: 经验总结
+category: 环境配置
 tags: 
   - linux
 ---

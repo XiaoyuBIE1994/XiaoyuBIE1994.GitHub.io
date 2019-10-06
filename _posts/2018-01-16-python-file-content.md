@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python文件和目录操作(os 模块)
-category: 实用库
+category: 库函数学习
 tags:
   - python
 ---

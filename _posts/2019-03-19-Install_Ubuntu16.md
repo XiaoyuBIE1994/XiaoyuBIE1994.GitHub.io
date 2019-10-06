@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Windows安装Ubuntu双系统
-category: 经验总结
+category: 环境配置
 tags: 
   - linux
 ---
