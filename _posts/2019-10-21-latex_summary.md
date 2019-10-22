@@ -269,7 +269,6 @@ Mac OS & MacTeX & TeXShop \\
 - `\hline` 代表画出相应的水平网格线
 
 
-
 #### 4.3 浮动体
 
 插图和表格通常需要占据大块空间，所以在文字处理软件中我们经常需要调整他们的位置。`figure` 和 `table` 环境可以自动完成这样的任务；这种自动调整位置的环境称作浮动体(float)。以 `figure` 为例：
@@ -340,14 +339,12 @@ We build the research window to define the range of all the pixels nearby which 
 ![][2]
 
 
-
 - `\linewidt`代表页面宽度
 - `\hfill` 是个弹性填充命令，它会把两边的内容“推”得尽可能远
 - `\vspace{2cm}` 代表插入 2cm 的垂直间距，水平方向可使用 ``\hspace{2cm}``
 
 
-
-## 5. 代码块
+## 5. 代码块
 
 Latex可以插入代码块，并进行背景的编辑：
 
