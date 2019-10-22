@@ -22,12 +22,23 @@ tags:
 
 ## 双系统安装指南
 双系统安装其实很简单，一般步骤为:  
-Windows磁盘分区（如果事先装有Ubuntu需要先卸载掉）-> 关闭快速启动 -> 重启进入BIOS进行设置 -> 进入Ubuntu安装 -> 磁盘分区 -> 安装成功  
+Windows磁盘分区（如果事先装有Ubuntu需要先卸载掉）-> 关闭快速启动 -> 重启进入BIOS进行设置（一般的点电脑在启动时按住 `F2` 即可进入，需要关掉 Fast Boot） -> 进入Ubuntu安装 -> 磁盘分区 -> 安装成功  
 
 卸载原有Ubuntu流程；
 备份 Ubuntu 所需文件。在 Windows 10 下用管理员帐号，运行 cmd.exe，输入bootsect /nt60 c: /mbr修复主引导记录（覆盖掉 grub)；重新启动。打开磁盘管理，删除ubuntu分区，重新分区，或将 Windows 的分区进行扩展。
 
-[卸载EFI分区](https://blog.csdn.net/mtllyb/article/details/78635757)
+[卸载EFI分区](https://blog.csdn.net/mtllyb/article/details/78635757)：
+
+- 利用管理员权限打开 cmd
+- 输入 diskpart
+- `list disk` 查看瓷盘信息
+- 若 ubuntu 装在磁盘1，则选择磁盘1，`select disk 1`
+- 查看磁盘1下所有分区，`list partition`
+- 选择 EFI 所在分区（例如为分区4），`select partition 4`
+- 删除分区，`delete partition override`
+- 在磁盘管理中选择 `扩展卷` 将分区合并
+
+
 
 最容易问题的地方在于磁盘分区，网上大多数的攻略是让我们设置 /boot 来作为系统引导，但这是在Legacy驱动下的教程，现在大多数电脑都换成了UEFI启动模式，如果按照网上大多数的攻略来安装Ubuntu，重启后会进入 Grub rescues 的错误而且很那修复(我尝试了很久还是放弃了)，所以在分区的时候不需要分 /boot，而是需要分出一块efi system partition。[具体攻略参考如下](https://www.bbsmax.com/A/q4zVeMjdKr/)
 
