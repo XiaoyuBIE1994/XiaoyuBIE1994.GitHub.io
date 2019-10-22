@@ -342,8 +342,8 @@ We build the research window to define the range of all the pixels nearby which 
 
 
 - `\linewidt`代表页面宽度
-- `\hfill` 代表
-- `\vspace{2cm}` 代表
+- `\hfill` 是个弹性填充命令，它会把两边的内容“推”得尽可能远
+- `\vspace{2cm}` 代表插入 2cm 的垂直间距，水平方向可使用 ``\hspace{2cm}``
 
 
 
