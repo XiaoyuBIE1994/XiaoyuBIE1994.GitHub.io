@@ -122,11 +122,81 @@ hello,word!
 
 
 
-#### 2.4 文字编排
+#### 2.4 文字排版
 
-引用
+**字体大小：**
+
+| 符号 | 长度 | 符号 | 长度               | 符号 | 长度                    |
+| ---- | ---- | ---- | ------------------ | ---- | ----------------------- |
+| in   | 英寸 | pt   | point, 1/72.27 in  | em   | 当前字体中字母 M 的宽度 |
+| cm   | 厘米 | bp   | big point, 1/72 in | ex   | 当前字体中字母 x 的高度 |
+| mm   | 毫米 | pc   | pica, 12 pt        | mu   | math unit,1/18 em       |
+
+> point 是个传统印刷业采用的单位,而 big point 是 Adobe 推出 PostScript 时定义的新单位。em 是个相对单位,比如当前字体是 11pt 时,1em 就是 11pt;ex 和 mu 也是相对单位
 
 
+
+**脚注：**
+
+```latex
+正文\footnote{脚注}
+```
+
+
+
+**注释：**
+
+可以用百分号来标明注释，但大段文字的注释会比较麻烦，这里可以使用`verbatim` 宏包的 `comment` 环境：
+
+```latex
+\begin{comment}
+...
+\end{comment}
+```
+
+
+
+**列表：**
+
+- 无序列表
+
+```latex
+\begin{itemize}
+  \item C++
+  \item Java
+  \item HTML
+\end{itemize}
+```
+
+
+
+- 有序列表
+
+```latex
+\begin{enumerate}
+  \item C++
+  \item Java
+  \item HTML
+\end{enumerate}
+```
+
+
+
+- 描述列表
+
+```latex
+\begin{description}
+  \item[C++] 编 程 语 言
+  \item[Java] 编 程 语 言
+  \item[HTML] 标 记 语 言
+\end{description}
+```
+
+
+
+**盒子：**
+
+LaTex在排版时把每个对象 (小到一个字母,大到一个段落) 都视为一个矩形盒子 (box)，较为常见的是`\mbox`和 `\fbox`，前者把一组对象组合起来,后者在此基础上加了个边框
 
 
 
@@ -192,6 +262,11 @@ Mac OS & MacTeX & TeXShop \\
 | Unix/Linux | teTeX    | Kile      |
 | Mac OS     | MacTeX   | TeXShop   |
 | 通用       | TeX Live | TeXworks  |
+
+
+
+- tabular 里的参数中，`l c r`分别代表左对齐，居中和右对齐， `|` 代表显示纵向的网格线
+- `\hline` 代表画出相应的水平网格线
 
 
 
