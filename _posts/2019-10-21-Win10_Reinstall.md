@@ -33,6 +33,12 @@ tags:
 - 重新输入 `reagentc /info` 查看状态，会显示 `Windows RE 状态： Enable `
 
 
+重新执行初始化，仍然出现问题，显示 `Windows10重置电脑时出现问题，未进行任何更改`，尝试如下解决办法：
+
+- 在管理员命令提示符下键入以下命令：`Dism /Online /Cleanup-Image /ScanHealth`，这条命令将扫描全部系统文件并和官方系统文件对比，扫描计算机中的不一致情况
+- 在前一条命令执行完以后，发现系统文件有损坏时，输入 `Dism /Online /Cleanup-Image /CheckHealth`
+- 把那些不同的系统文件还原成官方系统源文件，`DISM /Online /Cleanup-image /RestoreHealth`
+- 重启，输入 `sfc /SCANNOW`
 
 
 
