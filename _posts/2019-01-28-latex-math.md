@@ -44,11 +44,11 @@ tags: latex
 需要 `amsmath` 宏包：
 
 ```latex
-\[ \begin{pmatrix} a&b\\c&d \end{pmatrix} \quad
-\begin{bmatrix} a&b\\c&d \end{bmatrix} \quad
-\begin{Bmatrix} a&b\\c&d \end{Bmatrix} \quad
-\begin{vmatrix} a&b\\c&d \end{vmatrix} \quad
-\begin{Vmatrix} a&b\\c&d \end{Vmatrix} \]
+\[ \begin{pmatrix} a&b\\\\c&d \end{pmatrix} \quad
+\begin{bmatrix} a&b\\\\c&d \end{bmatrix} \quad
+\begin{Bmatrix} a&b\\\\c&d \end{Bmatrix} \quad
+\begin{vmatrix} a&b\\\\c&d \end{vmatrix} \quad
+\begin{Vmatrix} a&b\\\\c&d \end{Vmatrix} \]
 ```
 
 

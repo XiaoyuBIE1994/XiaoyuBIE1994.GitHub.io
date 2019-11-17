@@ -136,6 +136,29 @@ hello,word!
 
 
 
+**换行：**
+
+Latex里面有多种换行方式，区别如下：
+
+- 两个反斜杠 `\` ，换行后下一段首行顶头，不缩进
+- 使用命令 `\newline` ，效果同上
+- 两段之间空一行，换行后首行缩进
+
+
+
+**首行缩进：**
+
+一般Latex会自动首行缩进，如果不想缩进，可在段落前加上 `\noindent`
+
+
+
+## 粗体和斜体
+
+- `\textbf{}` 粗体
+- `\textif{}` 斜体
+
+
+
 **脚注：**
 
 ```latex
@@ -241,15 +264,15 @@ LaTex可以很方便的输入数学公式：
 ```latex
 \begin{tabular}{|l|c|r|}
  \hline
-操作系统& 发行版& 编辑器\\
+操作系统& 发行版& 编辑器\\\\
  \hline
-Windows & MikTeX & TexMakerX \\
+Windows & MikTeX & TexMakerX \\\\
  \hline
-Unix/Linux & teTeX & Kile \\
+Unix/Linux & teTeX & Kile \\\\
  \hline
-Mac OS & MacTeX & TeXShop \\
+Mac OS & MacTeX & TeXShop \\\\
  \hline
-通用 & TeX Live & TeXworks \\
+通用 & TeX Live & TeXworks \\\\
  \hline
 \end{tabular}
 ```
@@ -297,11 +320,11 @@ LaTex 可以使用一个 `figure` 来同时插入多张子图，如下：
 ```latex
 \begin{figure} [h]
 \begin{tabular}{c}
-\includegraphics[width = 0.9\textwidth]{data_association.png} \\
-\bf{(a)} \\
-\includegraphics[width = 0.9\textwidth]{signal_level.png} \\
-\bf{(b)} \\
-\includegraphics[width = 0.9\textwidth]{feature_level.png} \\
+\includegraphics[width = 0.9\textwidth]{data_association.png} \\\\
+\bf{(a)} \\\\
+\includegraphics[width = 0.9\textwidth]{signal_level.png} \\\\
+\bf{(b)} \\\\
+\includegraphics[width = 0.9\textwidth]{feature_level.png} \\\\
 \bf{(c)}
 \end{tabular}
 \caption{The three groups for map-perception-aided localization. (a) Data association based localization system. (b) Signal-level filter based localization. (c) Feature-level filter based localization. }
@@ -514,17 +537,112 @@ publisher ="出版社名称"
 
 
 
-## 8. 常见宏包
+## 8. Latex样本实例
 
-`\usepackage{amsmath}`： 提供了一些必要的数学公式
+#### 8.1 Overleaf example
 
-`\usepackage{graphicx}`：提供了方便的图片插入操作
+```latex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
 
-`\usepackage{float}` ： 强制浮动的图片
+\title{...}
+\author{... }
+\date{October 2019}
 
-`\usepackage{booktabs}` ： 可以插入一些复杂形式的表格
+\usepackage{natbib}
+\usepackage{graphicx}
 
-`\usepackage{url}` ：可以插入网页链接的引用
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.7]{universe}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
+
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}	
+```
+
+
+
+#### 8.2 个性化报告模板
+
+这一模板会在封面插入个性化设置的报告首页
+
+```latex
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel} % 确保解释器为英文
+\usepackage[utf8x]{inputenc} % 确认为UTF8x
+\usepackage[T1]{fontenc} % 如果需要添加音标时使用这个包
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{url} % bibliography of website
+\usepackage{booktabs} % complex table
+\usepackage{float} % picture
+\usepackage{cite}
+\usepackage{subfigure} % enable to draw sub figures
+
+\title{...}
+\author{...}
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace{2cm}
+    \includegraphics[width=16cm]{logo.png} % 添加logo
+	\vfill
+  
+	\begin{huge} % 输入标题
+		....
+    \vspace{5cm}
+	\end{huge}
+    \vfill    
+	
+	\begin{Large} % 作者，或者其他信息，可重复添加
+		Name \\
+    \vspace{1cm}
+	\end{Large}
+	\\[0\baselineskip]
+	\vfill
+\end{titlepage}     
+\newpage
+
+\tableofcontents
+\newpage
+
+\begin{abstract}
+...
+\end{abstract}
+
+\section{...}
+
+\bibliographystyle{unsrt}
+\bibliography{sample}
+\end{document}
+```
+
+
 
 
 
