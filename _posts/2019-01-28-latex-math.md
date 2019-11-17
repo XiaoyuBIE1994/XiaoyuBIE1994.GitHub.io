@@ -83,18 +83,18 @@ $$
 | $($ | ( | $)$ | ) | $\uparrow$ | \uparrow | $\Uparrow$ | \Uparrow |
 | $\lbrack$ | \\[ or \lbrack | $\rbrack$ | \\] or \rbrack | $\downarrow$ | \downarrow | $\Downarrow$ | \Downarrow |
 | $\lbrace$ | \\{ or \lbrace | $\rbrace$ | \\} or \rbrace | $\updownarrow$ | \updownarrow | $\Updownarrow$ | \Updownarrow |
-| $\langle$ | \langle | $\rangle$ | \rangle | $\vert$ | \| or \vert | $\Vert$ | \\|
+| $\langle$ | \langle | $\rangle$ | \rangle | $\vert$ | \| or \vert | $\Vert$ | \parallel |
 | $\lfloor$ | \lfloor | $\rfloor$ | \rfloor | $\lceil$ | \lceil | $\rceil$ | \rceil |
-| $/$ | / | $\backslash$ | \backslash |  | |  | |
+| $/$ | / | $\backslash$ | \backslash |  | |  |  |
 | $\lgroup$ | \lgroup | $\rgroup$ | \rgroup | $\lmoustache$ | \lmoustache | $\rmoustache$ | \rmoustache |
 | $\arrowvert$ | \arrowvert | $\Arrowvert$ | \Arrowvert | $\bracevert$ | \bracevert |  |  |
 
 
 
-- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left | \| \frac{a}{b} \| \right | \big \rangle \Big \} \bigg ] \Bigg )`:  $\Bigg ( \bigg [ \Big \{\big \langle \left | \| \frac{a}{b} \| \right | \big \rangle \Big \} \bigg ] \Bigg )$
+- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left \vert \parallel \frac{a}{b}  \parallel \right | \big \rangle \Big \} \bigg ] \Bigg )`:  $\Bigg ( \bigg [ \Big \{\big \langle \left | \| \frac{a}{b} \| \right | \big \rangle \Big \} \bigg ] \Bigg )$
 - 自适应大小的括号 `\left( \frac{a}{b} \right)`： $\left( \frac{a}{b} \right)$
-- 单边括号 `\left . \frac{a}{b} \right \}` :  $\left . \frac{a}{b} \right \}$
-- 混合括号 `\left \langle \psi \right |` : $\left \langle \psi \right |$
+- 单边括号 `\left . \frac{a}{b} \right \rbrace` :  $\left . \frac{a}{b} \right \}$
+- 混合括号 `\left \langle \psi \right \vert` : $\left \langle \psi \right \vert$
 
 
 
