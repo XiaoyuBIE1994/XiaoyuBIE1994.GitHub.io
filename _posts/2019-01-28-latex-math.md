@@ -91,10 +91,11 @@ $$
 
 
 
-- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left \vert \parallel \frac{a}{b}  \parallel \right \vert \big \rangle \Big \} \bigg ] \Bigg )`:
-  $$
+- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left \vert \parallel \frac{a}{b}  \parallel \right \vert \big \rangle \Big \} \bigg ] \Bigg )`: 
+
+$$
   \Bigg ( \bigg [ \Big \{\big \langle \left \vert \| \frac{a}{b} \| \right \vert \big \rangle \Big \} \bigg ] \Bigg )
-  $$
+$$
 
 - 自适应大小的括号 `\left( \frac{a}{b} \right)`：
 
