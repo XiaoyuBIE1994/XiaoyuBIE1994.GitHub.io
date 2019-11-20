@@ -91,10 +91,32 @@ $$
 
 
 
-- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left \vert \parallel \frac{a}{b}  \parallel \right \vert \big \rangle \Big \} \bigg ] \Bigg )`:  $\Bigg ( \bigg [ \Big \{\big \langle \left \vert \| \frac{a}{b} \| \right \vert \big \rangle \Big \} \bigg ] \Bigg )$
-- 自适应大小的括号 `\left( \frac{a}{b} \right)`： $\left( \frac{a}{b} \right)$
-- 单边括号 `\left . \frac{a}{b} \right \rbrace` :  $\left . \frac{a}{b} \right \}$
-- 混合括号 `\left \langle \psi \right \vert` : $\left \langle \psi \right \vert$
+- 不同大小的括号 `\Bigg ( \bigg [ \Big \{\big \langle \left \vert \parallel \frac{a}{b}  \parallel \right \vert \big \rangle \Big \} \bigg ] \Bigg )`:
+  $$
+  \Bigg ( \bigg [ \Big \{\big \langle \left \vert \| \frac{a}{b} \| \right \vert \big \rangle \Big \} \bigg ] \Bigg )
+  $$
+
+- 自适应大小的括号 `\left( \frac{a}{b} \right)`：
+
+$$
+\left( \frac{a}{b} \right)
+$$
+
+- 单边括号 `\left . \frac{a}{b} \right \rbrace` :  
+
+$$
+\left . \frac{a}{b} \right \}
+$$
+
+
+
+- 混合括号 `\left \langle \psi \right \vert` : 
+
+$$
+\left \langle \psi \right \vert
+$$
+
+
 
 
 
